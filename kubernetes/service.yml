@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: pi-hole-service
+spec:
+  clusterIP: 10.43.186.22
+  type: ClusterIP
+  selector:
+    app: pi-hole
+  ports:
+  - name: dns-tcp
+    port: 53
+    protocol: TCP
+    targetPort: 53
+  - name: dns
+    port: 53
+    protocol: UDP
+    targetPort: 53
+  - name: tcp
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  - name: other-tcp
+    port: 443
+    protocol: TCP
+    targetPort: 443
