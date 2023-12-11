@@ -1,3 +1,4 @@
+
 ## Use Pi-hole on container
 
 Inside of this folders you can find deploy files to run Pi-hole in each container solution.
@@ -15,4 +16,9 @@ To do that, you just need to execute
 After that you are able to create deployment and service.
 
 Enjoy it!
+
+
+## Autores
+
+- [@TnioA](https://github.com/TnioA)
 
