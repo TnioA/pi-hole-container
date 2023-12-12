@@ -1,4 +1,3 @@
-
 ## Use Pi-hole on container
 
 Inside of this folders you can find deploy files to run Pi-hole in each container solution.
