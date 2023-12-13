@@ -1,0 +1,30 @@
+# To use this type of service you need to remove "hostNetwork: true" from deployment
+apiVersion: v1
+kind: Service
+metadata:
+  name: pi-hole-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: pi-hole
+  ports:
+  - name: dns-tcp
+    port: 53
+    protocol: TCP
+    targetPort: 53
+  - name: dns
+    port: 53
+    protocol: UDP
+    targetPort: 53
+  - name: dhcp
+    port: 67
+    protocol: UDP
+    targetPort: 67
+  - name: tcp
+    port: 30003
+    protocol: TCP
+    targetPort: 80
+  - name: other-tcp
+    port: 443
+    protocol: TCP
+    targetPort: 443
