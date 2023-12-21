@@ -35,6 +35,8 @@ spec:
               value: America/Fortaleza
             - name: WEBPASSWORD
               value: 123
+            - name: VIRTUAL_HOST
+              value: your.domain
           volumeMounts:
             - name: etc
               mountPath: /etc/pihole
